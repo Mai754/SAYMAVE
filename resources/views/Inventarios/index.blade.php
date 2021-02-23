@@ -8,6 +8,13 @@
             {{Session::get('Mensaje')}}
         </div>
     @endif
+    <h6>
+        @if($serach)
+            <div class="alet alert-primary" role="alert">
+                Los resultado para su busqueda '{{$search}}' son:
+            </div>
+        @endif
+    </h6>
     <br>
         <a href="{{url('clientes')}}" class="btn btn-success" >Clientes</a>
         <a href="{{url('empleados')}}" class="btn btn-success" >Empleados</a>

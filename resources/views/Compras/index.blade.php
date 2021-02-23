@@ -1,5 +1,6 @@
-@extends('plantilla.madre')
+@extends('layouts.app')
 
+@section('content')
 <div class="Container">
    <br>
    @if(Session::has('Mensaje')) 
@@ -50,3 +51,4 @@
       <a href="{{ url('Compras/create')}}" class="btn btn-info" >Agregar Proveedor</a>
    <br/>
 </div>
+@endsection
