@@ -4,7 +4,7 @@
     <form action="{{url('/empleados/'.$empleado->id)}}" method="post">
         @csrf
         {{method_field('PUT') }}
-        @include('empleados.form',['Modo'=>'editar'])
+        @include('empleados.form',['Modo'=>'Editar'])
     </form>
 </div>
 

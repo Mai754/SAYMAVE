@@ -29,6 +29,11 @@ class InventariosController extends Controller
         //
         return view('inventarios.create');
     }
+    public function search(Request $request){
+        $search = $request->get('search');
+        $posts = inventarios::table('posts')->where('name', 'like', '%'.$search.'%')->paginate(5);
+        return view('inventarios.index',  ['posts'=>$posts]);
+    }
 
     /**
      * Store a newly created resource in storage.

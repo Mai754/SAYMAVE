@@ -13,7 +13,19 @@
         <a href="{{url('empleados')}}" class="btn btn-success" >Empleados</a>
         <a href="{{url('proveedores')}}" class="btn btn-success" >Proveedores</a>
     <br>
-    <h1>Inventario</h1>
+        <div class="col-md-6">
+            <h1>Inventario</h1>
+        </div>
+        <div class="col-md-4">
+            <form action="/search" method="get" >
+                <div class="input-group">
+                    <input type="search" name="search" class="form-control">
+                    <span class="input-group-prepend">
+                        <button type="submit" class="btn btn-primary">Search</button>
+                    </span>
+                </div>
+            </form>
+        </div>
     <table class="table table-hover" >
         <thead class="thead-dark">
         <tr>

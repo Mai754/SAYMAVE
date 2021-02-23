@@ -72,19 +72,19 @@
     </div>
 
     <div class="form-group">
-        <label for="FotoDeEmpleado">{{'Foto De Emergencia'}}</label>
-        @if(isset($empleados->FotoDeEmpleado))
+        <label for="FotoDeEmpleado">{{'Foto De Empleado'}}</label>
     </div>
 
     <div class="form-group">
-        <img class="img-thumbnail img-fluid" src=" {{ asset('storage').'/'. 
-        $empleados->FotoDeEmpleado}}" alt="" width="100">
+        @if(isset($empleados->FotoDeEmpleado))
+            <img class="img-thumbnail img-fluid" src=" {{ asset('storage').'/'. 
+            $empleados->FotoDeEmpleado}}" alt="" width="100">
         @endif
         <input type="file" name="FotoDeEmpleado" id="FotoDeEmpleado" value="">
     </div>
     
     <div>
-        <input class="btn btn-success" type="submit" value="{{$Modo=='crear'?'Agregar':'Guardar'}}">
+        <input class="btn btn-success" type="submit" value="{{$Modo=='Crear'?'Agregar':'Guardar'}}">
         <a class="btn btn-primary" href="{{ url('empleados')}}">Regresar</a>
     </div>
 </div>

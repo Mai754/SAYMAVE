@@ -52,7 +52,7 @@
     </div>
 
     <div class="form-group">
-        <input type="submit" class="btn btn-success" value="{{$Modo=='crear'?'Agregar':'Guardar'}}">
+        <input type="submit" class="btn btn-success" value="{{$Modo=='Crear'?'Agregar':'Guardar'}}">
         <a class="btn btn-primary" href="{{url('inventarios')}}">Regresar</a>
     </div>
 </div>

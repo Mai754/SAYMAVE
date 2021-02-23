@@ -4,6 +4,6 @@
     <form action="{{url('/inventarios/'.$inventario->id)}}" method="post">
         {{csrf_field()}}
         {{method_field('PUT')}}
-        @include('inventarios.form',['Modo'=>'editar'])
+        @include('inventarios.form',['Modo'=>'Editar'])
     </form>
 </div>

@@ -45,7 +45,7 @@
     </div>
     
     <div>
-        <input class="btn btn-success" type="submit" value="{{$Modo=='crear'?'Agregar':'Guardar'}}">
+        <input class="btn btn-success" type="submit" value="{{$Modo=='Crear'?'Agregar':'Guardar'}}">
         <a class="btn btn-primary" href="{{url('proveedores')}}">Regresar</a>
     </div>
 </div>

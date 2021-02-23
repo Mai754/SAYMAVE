@@ -1,4 +1,6 @@
 <div class="container">
+    <br>
+    <h3>{{$Modo}} Cliente</h3>
 
     <div class="form-group">
         <label class="control-label" for="nombre_cliente">{{'Nombre De Cliente'}}</label>
@@ -22,7 +24,7 @@
     </div>
 
     <div class="form-group">
-        <input type="submit" class="btn btn-success" value="{{$Modo=='crear'?'Agregar':'Guardar'}}">
+        <input type="submit" class="btn btn-success" value="{{$Modo=='Crear'?'Agregar':'Guardar'}}">
         <a class="btn btn-primary" href="{{url('clientes')}}">Cancelar</a>
     </div>
 </div>
