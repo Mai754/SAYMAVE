@@ -15,12 +15,12 @@ class CreateProveedoresTable extends Migration
     {
         Schema::create('proveedores', function (Blueprint $table) {
             $table->increments('id');
-            $table->String('Nombre del encargado',15);
-            $table->String('Apellido del encargado',15);
-            $table->String('Nombre de la empresa',15);
-            $table->String('Dirección de la empresa',100);
-            $table->Char('Numero de telefono del encargado',8);
-            $table->Char('Numero de telefono de la empresa',8);
+            $table->string('nombredelencargado',15);
+            $table->string('apellidodelencargado',15);
+            $table->string('nombredelaempresa',15);
+            $table->string('direccióndelaempresa',100);
+            $table->char('numerodetelefonodelencargado', 8);
+            $table->char('numerodetelefonodelaempresa', 8);
             $table->timestamps();
         });
     }
