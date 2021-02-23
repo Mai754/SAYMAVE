@@ -8,9 +8,11 @@
             {{Session::get('Mensaje')}}
         </div>
     @endif
+    
     <br>
-        <a href="{{url('clientes/create')}}" class="btn btn-success" >Nuevo Cliente</a>
-        <a href="{{url('inventarios')}}" class="btn btn-success" >Inventario</a>
+        <a href="{{url('inventarios')}}" class="btn btn-success" >Inventarios</a>
+        <a href="{{url('empleados')}}" class="btn btn-success" >Empleados</a>
+        <a href="{{url('proveedores')}}" class="btn btn-success" >Proveedores</a>
     <br>
     <h1>Clientes</h1>
     <table class="table table-hover" >
@@ -50,4 +52,7 @@
         </tbody>
     </table>
     {{$clientes->links()}}
+    <br>
+        <a href="{{url('clientes/create')}}" class="btn btn-info" >Nuevo Cliente</a>
+    <br>
 </div>

@@ -9,8 +9,9 @@
         </div>
     @endif
     <br>
-        <a href="{{url('inventarios/create')}}" class="btn btn-success" >Nuevo Producto</a>
         <a href="{{url('clientes')}}" class="btn btn-success" >Clientes</a>
+        <a href="{{url('empleados')}}" class="btn btn-success" >Empleados</a>
+        <a href="{{url('proveedores')}}" class="btn btn-success" >Proveedores</a>
     <br>
     <h1>Inventario</h1>
     <table class="table table-hover" >
@@ -52,4 +53,7 @@
         </tbody>
     </table>
     {{$inventarios->links()}}
+    <br>
+        <a href="{{url('inventarios/create')}}" class="btn btn-info" >Nuevo Producto</a>
+    <br>
 </div>

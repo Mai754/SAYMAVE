@@ -7,9 +7,12 @@
                         {{Session::get('Mensaje') }}   
                 </div>
         @endif
-        <br/>
-                <a href="{{ url('empleados/create')}}" class="btn btn-success" >Agregar Empleado</a>
-        <br/>
+        
+        <br>
+                <a href="{{url('inventarios')}}" class="btn btn-success" >Inventarios</a>
+                <a href="{{url('clientes')}}" class="btn btn-success" >Clientes</a>
+                <a href="{{url('proveedores')}}" class="btn btn-success" >Proveedores</a>
+        <br>
         <h1>Empleados</h1>
         <table class="table table-hover" >
                 <thead class="thead-dark">
@@ -51,5 +54,7 @@
                                 </tbody>
         </table>
         {!! $empleados->links() !!}
-
+        <br/>
+                <a href="{{ url('empleados/create')}}" class="btn btn-info" >Agregar Empleado</a>
+        <br/>   
 </div>
