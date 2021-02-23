@@ -21,3 +21,5 @@ Route::resource('/inventarios', 'InventariosController');
 Route::resource('/clientes', 'ClientesController');
 Route::resource('/empleados', 'EmpleadosController');
 Route::resource('/proveedores', 'ProveedoresController');
+Route::resource('/Compras', 'ComprasController');
+Route::resource('/Ventas', 'VentasController');
