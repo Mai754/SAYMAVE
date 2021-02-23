@@ -12,16 +12,16 @@ class InventariosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
         //
-        $query = trim($request->get('search'));
-        if($request){
-            $datos = inventarios::where('name', 'LIKE', '%'.$query.'%')->orderBy('id','asc')->get();
-            return view('inventarios.index', [$datos, 'search' => $query]);
-        }
-        //$datos['inventarios']=inventarios::paginate(5);
-        //return view('inventarios.index', $datos);
+        //$query = trim($request->get('search'));
+        //if($request){
+        //    $datos = inventarios::where('name', 'LIKE', '%'.$query.'%')->orderBy('id','asc')->get();
+         //   return view('inventarios.index', [$datos, 'search' => $query]);
+        //}
+        $datos['inventarios']=inventarios::paginate(5);
+        return view('inventarios.index', $datos);
     }
 
     /**

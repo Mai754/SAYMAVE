@@ -1,4 +1,7 @@
 @extends('plantilla.madre')
+@extends('layouts.app')
+
+@section('content')
 
 <div class="container">
     <br>
@@ -8,13 +11,7 @@
             {{Session::get('Mensaje')}}
         </div>
     @endif
-    <h6>
-        @if($serach)
-            <div class="alet alert-primary" role="alert">
-                Los resultado para su busqueda '{{$search}}' son:
-            </div>
-        @endif
-    </h6>
+    
     <br>
         <a href="{{url('clientes')}}" class="btn btn-success" >Clientes</a>
         <a href="{{url('empleados')}}" class="btn btn-success" >Empleados</a>
@@ -69,3 +66,4 @@
         <a href="{{url('inventarios/create')}}" class="btn btn-info" >Nuevo Producto</a>
     <br>
 </div>
+@endsection

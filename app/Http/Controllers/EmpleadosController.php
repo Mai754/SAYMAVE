@@ -43,7 +43,7 @@ class EmpleadosController extends Controller{
         $campos=[
             'DNIEmpleado'=>'required|unique:empleados,DNIEmpleado|min:13|max:13',
             'PrimerNombre'=>'required|alpha',
-            'PrimerApellido' => 'required|alpha',
+            'PrimerApellido' => 'required|alpha|min:15|max:15',
             'DireccionEmpleado' => 'required|string',                  
             'TelefonoEmpleado'=>'required|min:8|max:8',
             'PuestoEmpleado' => 'required|alpha',

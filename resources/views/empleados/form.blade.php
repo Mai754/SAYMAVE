@@ -2,7 +2,7 @@
     <br>
     <h3>{{$Modo}} Empleado</h3>
     <div class="form-group">
-        <label class="control-label" for="DNIEmpleado">{{'DNI Empleado'}}</label>
+        <label class="control-label" for="DNIEmpleado">{{'Identidad De Empleado'}}</label>
         <input class="form-control {{$errors->has('DNIEmpleado')?'is-invalid':''}}" type="number" name="DNIEmpleado" id="DNIEmpleado" 
             value="{{ isset($empleado->DNIEmpleado)?$empleado->DNIEmpleado:old('DNIEmpleado')}}">
         {!! $errors->first('DNIEmpleado', '<div class="invalid-feedback">:message</div>') !!}
