@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Proveedores;
+use App\Models\Proveedores;
 use Illuminate\Http\Request;
 
 class ProveedoresController extends Controller
@@ -12,7 +12,9 @@ class ProveedoresController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(){
+    public function index()
+    {
+        //
         $datos['proveedores']=Proveedores::paginate(5);
         return view('proveedores.index',$datos);
     }
@@ -22,7 +24,9 @@ class ProveedoresController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(){
+    public function create()
+    {
+        //
         return view('proveedores.create');
     }
 
@@ -32,8 +36,9 @@ class ProveedoresController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request){
-        
+    public function store(Request $request)
+    {
+        //
         $campos=[
             'NombreDelEncargado'=>'required|alpha',
             'ApellidoDelEncargado'=>'required|alpha',
@@ -55,7 +60,7 @@ class ProveedoresController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Proveedores  $proveedores
+     * @param  \App\Models\Proveedores  $proveedores
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -68,7 +73,7 @@ class ProveedoresController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Proveedores  $proveedores
+     * @param  \App\Models\Proveedores  $proveedores
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -76,17 +81,18 @@ class ProveedoresController extends Controller
         //
         $proveedor= Proveedores::findOrFail($id);
         return view('proveedores.edit', compact('proveedor'));
-
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Proveedores  $proveedores
+     * @param  \App\Models\Proveedores  $proveedores
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id){
+    public function update(Request $request, $id)
+    {
+        //
         $datosProveedor=request()->except(['_token','_method']);
         Proveedores::where('id','=',$id)->update($datosProveedor);
         return redirect('proveedores')->with('Mensaje','Proveedor Modificado');
@@ -95,7 +101,7 @@ class ProveedoresController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Proveedores  $proveedores
+     * @param  \App\Models\Proveedores  $proveedores
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
@@ -103,6 +109,5 @@ class ProveedoresController extends Controller
         //
         Proveedores::destroy($id);
         return redirect('proveedores')->with('Mensaje','Proveedor Eliminado');
-
     }
 }

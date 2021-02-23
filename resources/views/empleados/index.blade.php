@@ -11,14 +11,17 @@
                 <a href="{{ url('empleados/create')}}" class="btn btn-success" >Agregar Empleado</a>
         <br/>
         <h1>Empleados</h1>
-        <table class="table table-light">
-                <thead class="thead-light"> 
+        <table class="table table-hover" >
+                <thead class="thead-dark">
                         <tr>
-                                <ths cope="col">Identidad del Empleado</th>
-                                <ths cope="col">Primer Nombre</th>
+                                <th scope="col">Identidad del Empleado</th>
+                                <th scope="col">Primer Nombre</th>
                                 <th scope="col">Primer Apellido</th>
                                 <th scope="col">Fecha De Nacimiento</th>
                                 <th scope="col">Puesto Empleado</th>
+                                <th scope="col"> </th>
+                                <th scope="col"> </th>
+                                <th scope="col"> </th>
                         </tr>
                         </thead>
                                 <tbody>

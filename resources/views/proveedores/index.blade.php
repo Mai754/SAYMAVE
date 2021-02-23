@@ -10,12 +10,16 @@
    <br/>
       <a href="{{ url('proveedores/create')}}" class="btn btn-success" >Agregar Proveedor</a>
    <br/>
-   <table class="table table-light">
-      <thead class="thead-light"> 
+   <h1>Proveedores</h1>
+   <table class="table table-hover" >
+      <thead class="thead-dark">
       <tr>
          <th scope="col">Nombre del Encargado</th>
          <th scope="col">Nombre de la Empresa</th>
          <th scope="col">Numero de Telefono del Encargado</th>
+         <th scope="col"> </th>
+         <th scope="col"> </th>
+         <th scope="col"> </th>
       </tr>
       </thead>
       <tbody>
