@@ -36,14 +36,10 @@
                                                         <td>{{ $empleado->FechaDeNacimiento}}</td>
                                                         <td>{{ $empleado->PuestoEmpleado}}</td>
                                                         <td>
-                                                                <a href="{{ url('/empleados/'.$empleado->id.'/edit')}}" class="btn btn-warning">Editar</a>      
+                                                        <a class="btn btn-primary" href="{{url('/empleados/'.$empleado->id)}}">Ver</a>
                                                         </td>
-                                                        <td>    
-                                                                <form  action="{{ url('/empleados/'.$empleado->id)}}" class="d-inline" method="post" style="display: inline">  
-                                                                        @csrf
-                                                                        {{ method_field('DELETE')}}
-                                                                        <button class="btn btn-danger" type="submit" onclick="return confirm('Desea Borrar');">Borrar</button>                    
-                                                                </form>                                  
+                                                        <td>
+                                                        <a href="{{ url('/empleados/'.$empleado->id.'/edit')}}" class="btn btn-warning">Editar</a>      
                                                         </td>
                                                 </tr>
                                         @empty

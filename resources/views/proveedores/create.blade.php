@@ -1,7 +1,7 @@
 @extends('plantilla.madre')
 
 <div class="Container">
-    <form action="{{ url('/proveedores')}}" method="post" enctype="multipart/form-data">
+    <form action="{{ url('proveedores')}}" method="post">
         @csrf
         @include('proveedores.form',['Modo'=>'Crear'])
     </form>

@@ -47,13 +47,6 @@
                         <a class="btn btn-primary"  href="{{url('/inventarios/'.$inventario->id)}}">Ver</a>
                     </td>
                     <td>
-                        <form action="{{url('/inventarios/'.$inventario->id)}}" method="post" style="display: inline">
-                            @csrf
-                            {{method_field('DELETE')}}
-                            <button class="btn btn-danger" type="submit" onclick="return confirm('¿Borrar?');">Borrar</button>
-                        </form>
-                    </td>
-                    <td>
                         <a class="btn btn-warning" href="{{url('/inventarios/'.$inventario->id.'/edit')}}">Editar</a>
                     </td>
                 </tr> 

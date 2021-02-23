@@ -42,7 +42,7 @@ class ClientesController extends Controller
         $campos=[
             'nombre_cliente'=> 'required|alpha',
             'apellido_cliente'=> 'required|alpha',
-            'numero_de_telefono'=> 'required|numeric|min:8|max:8'
+            'numero_de_telefono'=> 'required|min:8|max:8'
         ];
 
         $mensaje=["required"=> 'El :attribute es requerido'];

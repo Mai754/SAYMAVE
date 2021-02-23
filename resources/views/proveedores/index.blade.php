@@ -27,18 +27,11 @@
       <tbody>
          @forelse($proveedores as $proveedor)
          <tr>
-            <td>{{ $proveedor->NombreDelEncargado}}</td>
-            <td>{{ $proveedor->NombreDeLaEmpresa}}</td>
-            <td>{{ $proveedor->NumeroTelefonoEncargado}}</td>                          
+            <td>{{ $proveedor->nombre_encargado}}</td>
+            <td>{{ $proveedor->nombre_empresa}}</td>
+            <td>{{ $proveedor->numero_encargado}}</td>                          
             <td>
                <a class="btn btn-primary"  href="{{url('/proveedores/'.$proveedor->id)}}">Ver</a>      
-            </td>      
-            <td>
-               <form  action="{{ url('/proveedores/'.$proveedor->id)}}" class="d-inline" method="post" style="display: inline">  
-                  @csrf
-                  {{ method_field('DELETE')}}
-                  <button class="btn btn-danger" type="submit" onclick="return confirm('Desea Borrar');">Borrar</button>                    
-               </form>
             </td>
             <td>
                <a class="btn btn-warning" href="{{url('/proveedores/'.$proveedor->id.'/edit')}}">Editar</a>

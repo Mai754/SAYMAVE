@@ -18,9 +18,9 @@
     <table class="table table-hover" >
         <thead class="thead-dark">
         <tr>
-            <th scope="col">Nombre Del Cliente</th>
             <th scope="col">id Cliente</th>
-            <th scope="col"> </th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
             <th scope="col"> </th>
             <th scope="col"> </th>
         </tr>
@@ -28,17 +28,11 @@
         <tbody>
             @forelse ($clientes as $cliente)
                 <tr>
-                    <td>{{$cliente->nombre_cliente}}</td>
                     <td>{{$cliente->id}}</td>
+                    <td>{{$cliente->nombre_cliente}}</td>
+                    <td>{{$cliente->apellido_cliente}}</td>
                     <td>
                         <a class="btn btn-primary" href="{{url('/clientes/'.$cliente->id)}}">Ver</a>
-                    </td>
-                    <td>
-                        <form action="{{url('/clientes/'.$cliente->id)}}" method="post" style="display: inline">
-                            @csrf
-                            {{method_field('DELETE')}}
-                            <button class="btn btn-danger" type="submit" onclick="return confirm('¿Borrar?');">Borrar</button>
-                        </form>
                     </td>
                     <td>
                         <a class="btn btn-warning" href="{{url('/clientes/'.$cliente->id.'/edit')}}">Editar</a>

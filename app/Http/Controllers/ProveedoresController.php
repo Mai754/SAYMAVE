@@ -40,12 +40,12 @@ class ProveedoresController extends Controller
     {
         //
         $campos=[
-            'NombreDelEncargado'=>'required|alpha',
-            'ApellidoDelEncargado'=>'required|alpha',
-            'NombreDeLaEmpresa'=>'required|alpha',
-            'DireccionDeLaEmpresa'=>'required|string',
-            'NumeroTelefonoEncargado'=>'required|min:8|max:8',
-            'NumeroTelefonoEmpresa'=>'required|min:8|max:8'
+            'nombre_encargado'=>'required|alpha',
+            'apellido_encargado'=>'required|alpha',
+            'nombre_empresa'=>'required|alpha|unique:proveedores,nombre_empresa',
+            'dirección_empresa'=>'required|string',
+            'numero_encargado'=>'required|min:8|max:8|unique:proveedores,numero_encargado',
+            'numero_empresa'=>'required|min:8|max:8|unique:proveedores,numero_empresa'
         ];
 
         $mensaje=["required"=>'El :atributo es requerido'];
@@ -54,7 +54,7 @@ class ProveedoresController extends Controller
         $datosProveedor=request()->except('_token');
 
         Proveedores::insert($datosProveedor);
-        return redirect('proveedor')->with('Mensaje', 'Proveedor Agregado Con Éxito');
+        return redirect('proveedores')->with('Mensaje', 'Proveedor Agregado Con Éxito');
     }
 
     /**
